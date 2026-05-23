@@ -4,7 +4,7 @@ description = "Twitch Channel Point Redeems integration."
 weight = 80
 +++
 
-# Redeems
+
 
 If you stream on Twitch, you can link JakeyTTS to your Channel Points.
 

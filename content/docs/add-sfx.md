@@ -4,7 +4,7 @@ description = "How to add sound effects to JakeyTTS."
 weight = 50
 +++
 
-# Add SFX
+
 
 Adding sound effects (SFX) can enhance your stream's TTS experience.
 

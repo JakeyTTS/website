@@ -4,7 +4,7 @@ description = "Learn how to configure TTS in JakeyTTS."
 weight = 30
 +++
 
-# How to Configure TTS
+
 
 Configuring TTS in JakeyTTS is simple. 
 

@@ -12,3 +12,6 @@ title = 'JakeyTTS Documentation'
   darkMode = true
   # Disable search if not configured
   # search = false
+
+[outputs]
+  home = ["HTML", "JSON"]

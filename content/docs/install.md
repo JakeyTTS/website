@@ -4,7 +4,7 @@ description = "How to install JakeyTTS."
 weight = 10
 +++
 
-# How to Install JakeyTTS
+
 
 Follow these steps to install JakeyTTS on your system:
 

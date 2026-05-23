@@ -4,7 +4,7 @@ description = "Overview of Plugins in JakeyTTS."
 weight = 90
 +++
 
-# Plugins
+
 
 JakeyTTS has a flexible plugin system allowing you to extend its functionality. 
 

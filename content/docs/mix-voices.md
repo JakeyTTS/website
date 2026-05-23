@@ -4,7 +4,7 @@ description = "Explanation of Mix Voices in JakeyTTS."
 weight = 40
 +++
 
-# What is Mix Voices?
+
 
 **Mix Voices** allows you to blend different TTS voices together to create a unique output, or to alternate voices seamlessly within a single speech block. 
 
