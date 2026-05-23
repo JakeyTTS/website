@@ -1,6 +1,7 @@
 +++
 title = "JakeyTTS Documentation"
 description = "Welcome to the official documentation for JakeyTTS."
+icon = "home"
 weight = 1
 +++
 

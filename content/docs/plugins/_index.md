@@ -2,9 +2,8 @@
 title = "Plugins"
 description = "Overview of Plugins in JakeyTTS."
 weight = 90
+icon = "extension"
 +++
-
-
 
 JakeyTTS has a flexible plugin system allowing you to extend its functionality. 
 

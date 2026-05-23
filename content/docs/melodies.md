@@ -1,6 +1,7 @@
 +++
 title = "Melodies"
 description = "Using Melodies in JakeyTTS."
+icon = "music_note"
 weight = 60
 +++
 

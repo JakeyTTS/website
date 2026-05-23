@@ -1,6 +1,7 @@
 +++
 title = "How to Configure TTS"
 description = "Learn how to configure TTS in JakeyTTS."
+icon = "settings"
 weight = 30
 +++
 

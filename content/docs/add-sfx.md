@@ -1,6 +1,7 @@
 +++
 title = "Add SFX"
 description = "How to add sound effects to JakeyTTS."
+icon = "audio_file"
 weight = 50
 +++
 

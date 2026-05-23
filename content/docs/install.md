@@ -1,6 +1,7 @@
 +++
 title = "Install"
 description = "How to install JakeyTTS."
+icon = "download"
 weight = 10
 +++
 

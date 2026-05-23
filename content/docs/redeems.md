@@ -1,6 +1,7 @@
 +++
 title = "Redeems"
 description = "Twitch Channel Point Redeems integration."
+icon = "redeem"
 weight = 80
 +++
 

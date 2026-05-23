@@ -1,6 +1,7 @@
 +++
 title = "Commands"
 description = "List of TTS Commands."
+icon = "terminal"
 weight = 70
 +++
 
