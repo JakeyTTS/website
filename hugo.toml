@@ -1,0 +1,14 @@
+baseURL = 'https://jaykeytts.com/'
+languageCode = 'en-us'
+title = 'JakeyTTS Documentation'
+
+[module]
+  [[module.imports]]
+    path = "github.com/colinwilson/lotusdocs"
+
+[params]
+  description = "Documentation for JakeyTTS"
+  # Enable dark mode
+  darkMode = true
+  # Disable search if not configured
+  # search = false
