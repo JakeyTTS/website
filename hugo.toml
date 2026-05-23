@@ -7,7 +7,7 @@ title = 'JakeyTTS Documentation'
     path = "github.com/colinwilson/lotusdocs"
 
 [params]
-  description = "Documentation for JakeyTTS"
+  description = "JakeyTTS is a powerful, lightweight Text-to-Speech (TTS) client designed for streamers and creators. It features Twitch integration, custom voice mixing, sound effects (SFX), musical melodies, and an extensible plugin system."
   # Enable dark mode
   darkMode = true
   # Disable search if not configured
