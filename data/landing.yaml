@@ -6,6 +6,13 @@ hero:
   subtitle: "A lightweight, modern TTS client."
   info: "Easily integrate Twitch TTS, customize voices, and manage sound effects."
   
+  image:
+    path: ""
+    filename: "logo.png"
+    alt: "JakeyTTS Logo"
+    boxShadow: false
+    rounded: false
+  
   badge:
     text: "Documentation"
     color: "primary"
