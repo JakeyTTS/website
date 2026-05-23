@@ -1,17 +1,72 @@
 baseURL = 'https://jakeytts.com/'
 languageCode = 'en-us'
 title = 'JakeyTTS Documentation'
+enableEmoji = true
 
 [module]
   [[module.imports]]
     path = "github.com/colinwilson/lotusdocs"
+  [[module.imports]]
+    path = "github.com/fauzanmy/pehtheme-hugo"
 
 [params]
   description = "JakeyTTS is a powerful, lightweight Text-to-Speech (TTS) client designed for streamers and creators. It features Twitch integration, custom voice mixing, sound effects (SFX), musical melodies, and an extensible plugin system."
+  version = "2.0"
   # Enable dark mode
   darkMode = true
   # Disable search if not configured
   # search = false
 
+[params.social]
+  github = "JakeyTTS/JakeyTTS"
+
+[params.docs]
+  darkMode = true
+  sidebarIcons = true
+
+[params.footer]
+  copyright = "Copyright &copy; JakeyTTS 2026"
+
+[[menu.primary]]
+  name = "Documentation"
+  url = "/docs/"
+  weight = 10
+
+[[menu.primary]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 20
+
+[params.Author]
+  name = "JakeyTTS Team"
+  bio = "The creators and maintainers of JakeyTTS, a powerful text-to-speech engine for streamers."
+  avatar = "images/logo.png"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 20
+
+[[menu.main]]
+  name = "Documentation"
+  url = "/docs/"
+  weight = 30
+
 [outputs]
   home = ["HTML", "JSON"]
+
+[markup]
+    [markup.tableOfContents]
+      endLevel = 3
+      startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
+  [markup.goldmark.parser]
+    [markup.goldmark.parser.attribute]
+      block = true

@@ -7,11 +7,11 @@ hero:
   info: "Easily integrate Twitch TTS, customize voices, and manage sound effects."
   
   image:
-    path: ""
-    filename: "logo.png"
+    path: "images"
+    filename: "home_jakeytts.png"
     alt: "JakeyTTS Logo"
     boxShadow: false
-    rounded: false
+    rounded: true
   
   badge:
     text: "Documentation"
@@ -20,6 +20,36 @@ hero:
     soft: true
     
   ctaButton:
-    icon: "rocket_launch"
-    btnText: "Get Started"
-    url: "/docs/install/"
+    icon: "download"
+    btnText: "Download v2.0"
+    url: "/docs/download/"
+  
+  cta2Button:
+    icon: "description"
+    btnText: "Read Docs"
+    url: "/docs/"
+
+featureGrid:
+  enable: true
+  weight: 20
+  template: "feature grid"
+  title: "Core Features"
+  subtitle: "JakeyTTS is designed with streamers and creators in mind, offering powerful customization with a lightweight footprint."
+  items:
+    - title: "Twitch Integration"
+      icon: "chat"
+      description: "Directly connect to Twitch chat to speak messages and run automated rewards."
+    - title: "Voice Mixing"
+      icon: "tune"
+      description: "Create distinct voice profiles by mixing voices and adjusting parameters."
+    - title: "SFX & Melodies"
+      icon: "audiotrack"
+      description: "Trigger customizable sound effects and musical notes on specified triggers."
+    - title: "Plugin System"
+      icon: "extension"
+      description: "Easily extend the application's capabilities with custom-built plug-ins."
+
+imageCompare:
+  enable: false
+  weight: 30
+  template: "image compare"

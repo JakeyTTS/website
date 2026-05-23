@@ -15,3 +15,10 @@ To enqueue asynchronous audio rendering assignments directly onto the server gen
   }
 }
 ```
+
+### Speak Parameter Specifications
+
+| JSON Key | Type | Specification Description |
+| :--- | :--- | :--- |
+| `type` | `string` | Must be `'speak_request'` or `'tts_request'` interchangeably to activate text rendering pipeline workflows. |
+| `payload.text` | `string` | The raw message text phrase sent to process into synthesized voice data array frames. |

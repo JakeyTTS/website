@@ -2,7 +2,7 @@
 title = "Download"
 description = "Download buttons and links for JakeyTTS."
 icon = "cloud_download"
-weight = 20
+weight = 10
 +++
 
 

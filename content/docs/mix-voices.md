@@ -2,7 +2,7 @@
 title = "What is Mix Voices"
 description = "Explanation of Mix Voices in JakeyTTS."
 icon = "record_voice_over"
-weight = 40
+weight = 50
 +++
 
 

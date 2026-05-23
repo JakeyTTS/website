@@ -22,3 +22,14 @@ Immediately following network socket connection, sub-processes must dispatch a r
   }
 }
 ```
+
+### Upgraded Handshake Field Payload Specifications
+
+| JSON Parameter | Data Type | Handshake Parameter Requirement Specification |
+| :--- | :--- | :--- |
+| `type` | `string` | Must equal `'register'` precisely to initialize authentication validation layouts. |
+| `payload.id` | `string` | The absolute system unique layout string identifier for your extension (e.g., `'discord-voice-bridge'`). |
+| `payload.icon` | `string (Base64)` | Raw customized graphics asset file encoded as a continuous base64 text stream. Renders directly as the tile avatar container on the extension page workspace grid. |
+| `payload.executable_path` | `string (Path)` | The path targeting local execution bin files. If provided, the central framework takes control of process initialization states automatically. Omit to run as decoupled clients. |
+| `payload.launch_invisible` | `boolean` | When true, shifts background compilation process threads inside isolated CreateNoWindow states when launched by the user. |
+| `payload.subscriptions` | `array [string]` | Array string targets specifying desired hooks to intercept telemetry channels. Supported: `'chat'`, `'commands'`, `'redeems'`, `'bits'`, `'subs'`, `'test'`. |

@@ -2,10 +2,8 @@
 title = "Melodies"
 description = "Using Melodies in JakeyTTS."
 icon = "music_note"
-weight = 60
+weight = 70
 +++
-
-
 
 Melodies let your TTS speak with musical notes and intonations! 
 

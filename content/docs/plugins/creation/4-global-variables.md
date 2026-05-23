@@ -16,3 +16,11 @@ External sub-processes can push native decoupled key-value tokens into the memor
   }
 }
 ```
+
+### Variable Parameter Mapping Specifications
+
+| JSON Key | Type | Allocation Specification Definition |
+| :--- | :--- | :--- |
+| `type` | `string` | Must equal `'set_global_variable'` strictly to execute dictionary updates. |
+| `payload.variable_name` | `string` | The key identifier token string. Registered targets are cross-parsed anywhere across layout strings via bracket encapsulation. |
+| `payload.variable_value` | `string` | The concrete text sequence that dynamically substitutes matched database target identifiers when templates evaluate. |
