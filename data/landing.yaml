@@ -1,0 +1,18 @@
+hero:
+  enable: true
+  weight: 10
+  template: "hero"
+  title: "JakeyTTS"
+  subtitle: "A lightweight, modern TTS client."
+  info: "Easily integrate Twitch TTS, customize voices, and manage sound effects."
+  
+  badge:
+    text: "Documentation"
+    color: "primary"
+    pill: false
+    soft: true
+    
+  ctaButton:
+    icon: "rocket_launch"
+    btnText: "Get Started"
+    url: "/docs/install/"
