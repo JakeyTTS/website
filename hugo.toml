@@ -24,6 +24,9 @@ enableEmoji = true
   darkMode = true
   sidebarIcons = true
 
+[params.flexsearch]
+  enabled = true
+
 [params.footer]
   copyright = "Copyright &copy; JakeyTTS 2026"
 
