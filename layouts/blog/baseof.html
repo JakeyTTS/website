@@ -14,5 +14,10 @@
     {{- partial "blog/footer.html" . -}}
   </footer>
   {{- partialCached "footer/js.html" . }}
+  <!-- Dark Mode Switch JS -->
+  {{ if eq .Site.Params.docs.darkMode true -}}
+      {{ $darkModeSwitch := resources.Get "docs/js/darkmode-switch.js" | js.Build | minify }}
+      <script>{{ $darkModeSwitch.Content | safeJS }}</script>
+  {{ end -}}
 </body>
 </html>

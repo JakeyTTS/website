@@ -4,7 +4,20 @@
 <title>{{ if .IsHome }}JakeyTTS Blog{{ else }}{{ printf "%s | JakeyTTS Blog" .Title }}{{ end }}</title>
 <!-- Dynamic description for SEO -->
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}">
+
+<!-- Dark Mode Init -->
+{{ if eq .Site.Params.docs.darkMode true -}}
+    {{ $darkModeInit := resources.Get "docs/js/darkmode-init.js" | js.Build | minify -}}
+    <script>{{ $darkModeInit.Content | safeJS }}</script>
+{{ end -}}
+
 {{- partialCached "head/css.html" . -}}
+
+<!-- Blog Dark Mode Overrides CSS -->
+{{- with resources.Get "css/blog-dark.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+
 {{- partialCached "head/favicon.html" . -}}
 
 <!-- Clip out 3px white border from screenshots to fix Windows screenshot border issues -->
