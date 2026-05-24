@@ -16,7 +16,7 @@ hero:
   badge:
     text: "Version 2.0"
     color: "primary"
-    pill: false
+    pill: true
     soft: true
     
   ctaButton:
@@ -44,16 +44,16 @@ featureGrid:
       description: "Configure distinct voice profiles by mixing multiple voices and adjusting pitch, speed, and volume parameters."
     - title: "SFX & Melodies"
       icon: "audiotrack"
-      description: "Trigger customizable sound effects or compose musical notes programmatically for alert events."
+      description: "Trigger customizable sound effects or create custom melodies to apply to text-to-speech events."
     - title: "Pronunciation Dictionary"
       icon: "book"
       description: "Map custom pronunciation replacement patterns to handle acronyms, usernames, or slang terms perfectly."
     - title: "Commands & Action Blocks"
       icon: "code"
-      description: "Create complex workflows, custom commands, and conditional actions triggered directly from stream events."
+      description: "Create complex workflows, custom commands, and conditional actions that are triggered directly from stream events."
     - title: "Extensible Plugin System"
       icon: "extension"
-      description: "Easily extend functionality by writing plugins or importing community-built extensions."
+      description: "Easily extend functionality by writing custom plugins or importing community-built extensions."
 
 imageCompare:
   enable: false
