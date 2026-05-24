@@ -109,4 +109,15 @@
         {{- template "_internal/google_analytics.html" . -}}
     {{- end -}}
     {{- end -}}
+
+    <!-- Clip out 3px white border from screenshots to fix Windows screenshot border issues -->
+    <style>
+        .main-content img,
+        .docs-content img,
+        article img,
+        figure img {
+            clip-path: inset(3px round 8px);
+            border-radius: 8px !important;
+        }
+    </style>
 </head>
