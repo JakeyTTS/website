@@ -28,7 +28,7 @@ When the pipeline sounds processing triggers, the server dispatches a `process_a
 }
 ```
 
-### DSP Callback Registration Parameter Specifications
+## DSP Callback Registration Parameter Specifications
 
 | JSON Key | Type | Real-Time Data Handshake Rules |
 | :--- | :--- | :--- |

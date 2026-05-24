@@ -16,7 +16,7 @@ Embed administrative panels or dashboards natively within the central Navigation
 }
 ```
 
-### UI Injection Parameter Specifications
+## UI Injection Parameter Specifications
 
 | JSON Key | Type | Rendering Layout Requirement Rules |
 | :--- | :--- | :--- |

@@ -7,7 +7,7 @@ icon = "bolt"
 
 JakeyTTS allows commands and channel point redeems to trigger custom actions on specific plugins. In order for a plugin to receive these event payloads over WebSocket, it must register support during handshake subscriptions and declare its available trigger variables.
 
-### Step 1: Subscribing & Registering Triggers
+## Step 1: Subscribing & Registering Triggers
 
 When your plugin performs the initial Registration Handshake, include the `'commands'` and/or `'redeems'` scope strings inside the `'subscriptions'` array, and list the trigger variable names in the `'triggers'` array:
 
@@ -22,11 +22,11 @@ When your plugin performs the initial Registration Handshake, include the `'comm
 }
 ```
 
-### Step 2: Assigning the Trigger in JakeyTTS
+## Step 2: Assigning the Trigger in JakeyTTS
 
 Once your plugin registers, its declared triggers (e.g. `'diapstash_show'`) will show up in the `'Trigger Plugin'` ComboBox column in the Commands or Channel Rewards tables in JakeyTTS. The user maps a command or reward directly to your trigger.
 
-### Step 3: Receiving the WebSocket Trigger Payload
+## Step 3: Receiving the WebSocket Trigger Payload
 
 When the command or reward redemption is activated, JakeyTTS dispatches a `'trigger_event'` message over WebSocket. It contains the registered trigger name in the `'trigger'` and `'variable'` keys, allowing you to identify it independently of the user's custom command trigger name:
 
@@ -44,7 +44,7 @@ When the command or reward redemption is activated, JakeyTTS dispatches a `'trig
 }
 ```
 
-### Trigger Event Payload Parameter Specifications
+## Trigger Event Payload Parameter Specifications
 
 | JSON Key | Type | Trigger Data Rules |
 | :--- | :--- | :--- |

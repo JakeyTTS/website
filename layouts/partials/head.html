@@ -93,7 +93,15 @@
         /* Top Navigation Solid Background in Light Mode */
         #topnav {
             background-color: #ffffff !important;
-            border-bottom: 1px solid #dee2e6 !important;
+            border-bottom: none !important;
+        }
+
+        /* Fix mode toggle icon color in light mode */
+        #topnav .toggle-dark {
+            color: #3c4858 !important;
+        }
+        [data-dark-mode] #topnav .toggle-dark {
+            color: rgba(255, 255, 255, 0.5) !important;
         }
 
         /* Landing Page Dark Mode Styles */
@@ -104,7 +112,7 @@
 
         [data-dark-mode] #topnav {
             background-color: #181921 !important;
-            border-bottom: 1px solid #292a35 !important;
+            border-bottom: none !important;
         }
 
         [data-dark-mode] #topnav .navigation-menu > li > a {

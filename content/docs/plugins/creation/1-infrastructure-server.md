@@ -11,7 +11,7 @@ The central asynchronous core initializes an automated local loopback pipeline e
 ws://localhost:8889/
 ```
 
-### Automated Execution Lifecycle Engine Specification
+## Automated Execution Lifecycle Engine Specification
 
 To eliminate manuals user configuration dependencies entirely, developers transmit runtime properties dynamically inside the registration handshake package. The server automatically routes process management requests based on the criteria below:
 

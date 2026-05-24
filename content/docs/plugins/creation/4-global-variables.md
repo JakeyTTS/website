@@ -17,7 +17,7 @@ External sub-processes can push native decoupled key-value tokens into the memor
 }
 ```
 
-### Variable Parameter Mapping Specifications
+## Variable Parameter Mapping Specifications
 
 | JSON Key | Type | Allocation Specification Definition |
 | :--- | :--- | :--- |

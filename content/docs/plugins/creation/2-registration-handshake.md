@@ -23,7 +23,7 @@ Immediately following network socket connection, sub-processes must dispatch a r
 }
 ```
 
-### Upgraded Handshake Field Payload Specifications
+## Upgraded Handshake Field Payload Specifications
 
 | JSON Parameter | Data Type | Handshake Parameter Requirement Specification |
 | :--- | :--- | :--- |
