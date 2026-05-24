@@ -88,6 +88,15 @@ html[data-dark-mode] .bg-white:hover {
     background-color: #2563eb !important;
 }
 
+html[data-dark-mode] .discord-btn {
+    background-color: #ffffff !important;
+    color: #2563eb !important;
+}
+
+html[data-dark-mode] .discord-btn:hover {
+    background-color: #f1f5f9 !important;
+}
+
 html[data-dark-mode] input[type="text"] {
     background-color: #0b0f19 !important;
     border: 1px solid #1e293b !important;

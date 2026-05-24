@@ -1,0 +1,28 @@
+<div class="max-w-7xl mx-auto my-16 rounded-3xl bg-blue-500">
+	
+	<div class="flex flex-wrap p-6 lg:p-10 space-y-6 lg:space-y-0 items-center">
+
+		<div class="w-full md:w-3/5 lg:pr-10 text-white">
+
+			<h3 class="text-2xl font-semibold mb-4">Join Our Discord Community!</h3>
+
+			<p>Connect with other streamers and creators, share your custom voice presets, get help with plugin development, and stay updated on the latest JakeyTTS features.</p>
+
+		</div>
+
+		<div class="self-center flex flex-col w-full md:w-2/5 items-start md:items-end">
+			{{ if site.Params.social.discord }}
+			<a href="https://discord.gg/{{ site.Params.social.discord }}" target="_blank" rel="noopener noreferrer" class="discord-btn px-8 py-3 rounded-full bg-white text-blue-600 font-bold hover:bg-zinc-100 transition-colors flex items-center space-x-2">
+				{{ with resources.Get "images/social/discord.svg" }}
+					<span class="w-5 h-5 flex items-center justify-center text-blue-600">
+						{{ .Content | safeHTML }}
+					</span>
+				{{ end }}
+				<span>Join Discord</span>
+			</a>
+			{{ end }}
+		</div>
+		
+	</div>
+
+</div>
