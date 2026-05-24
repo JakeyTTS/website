@@ -14,15 +14,15 @@ hero:
     rounded: true
   
   badge:
-    text: "Documentation"
+    text: "Version 2.0"
     color: "primary"
     pill: false
     soft: true
     
   ctaButton:
     icon: "download"
-    btnText: "Download v2.0"
-    url: "/docs/download/"
+    btnText: "Download"
+    url: "https://github.com/JakeyTTS/JakeyTTS/releases"
   
   cta2Button:
     icon: "description"
@@ -37,17 +37,23 @@ featureGrid:
   subtitle: "JakeyTTS is designed with streamers and creators in mind, offering powerful customization with a lightweight footprint."
   items:
     - title: "Twitch Integration"
-      icon: "chat"
-      description: "Directly connect to Twitch chat to speak messages and run automated rewards."
-    - title: "Voice Mixing"
+      icon: "images/twitch.svg"
+      description: "Directly connect to Twitch chat to speak messages, read events, and trigger automated channel rewards."
+    - title: "Mixed Voices"
       icon: "tune"
-      description: "Create distinct voice profiles by mixing voices and adjusting parameters."
+      description: "Configure distinct voice profiles by mixing multiple voices and adjusting pitch, speed, and volume parameters."
     - title: "SFX & Melodies"
       icon: "audiotrack"
-      description: "Trigger customizable sound effects and musical notes on specified triggers."
-    - title: "Plugin System"
+      description: "Trigger customizable sound effects or compose musical notes programmatically for alert events."
+    - title: "Pronunciation Dictionary"
+      icon: "book"
+      description: "Map custom pronunciation replacement patterns to handle acronyms, usernames, or slang terms perfectly."
+    - title: "Commands & Action Blocks"
+      icon: "code"
+      description: "Create complex workflows, custom commands, and conditional actions triggered directly from stream events."
+    - title: "Extensible Plugin System"
       icon: "extension"
-      description: "Easily extend the application's capabilities with custom-built plug-ins."
+      description: "Easily extend functionality by writing plugins or importing community-built extensions."
 
 imageCompare:
   enable: false
