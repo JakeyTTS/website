@@ -22,7 +22,7 @@ hero:
   ctaButton:
     icon: "download"
     btnText: "Download"
-    url: "https://github.com/JakeyTTS/JakeyTTS/releases"
+    url: "https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0/JakeyTTS_v2.0.exe"
   
   cta2Button:
     icon: "description"
