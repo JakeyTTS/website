@@ -125,5 +125,22 @@
         #top-header .header-bar {
             border-bottom: none !important;
         }
+
+        /* Hide duplicate topbar logo on desktop (since it is already in the sidebar) */
+        @media (min-width: 1025px) {
+            #top-header .logo-icon {
+                display: none !important;
+            }
+        }
+
+        /* Fix list item numbering visibility and contrast in light mode vs dark mode */
+        .docs-content ol > li::before {
+            background-color: #f1f3f5 !important;
+            color: #212529 !important;
+        }
+        [data-dark-mode] .docs-content ol > li::before {
+            background-color: #343a40 !important;
+            color: #f8f9fa !important;
+        }
     </style>
 </head>
