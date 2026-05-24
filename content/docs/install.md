@@ -40,15 +40,36 @@ Once the installer launches, you must select the installation scope for the appl
 
 The wizard will guide you through the setup stages to copy files onto your system:
 
-````carousel
-![Selecting Destination Location](images/install_step_1.png)
-<!-- slide -->
-![Ready to Install Confirmation Screen](images/install_step_2.png)
-<!-- slide -->
-![Copying Files Progress Bar](images/install_step_3.png)
-<!-- slide -->
-![Extracting Assets Screen](images/install_step_4.png)
-````
+<div id="installCarousel" class="carousel carousel-dark slide my-4" data-bs-ride="carousel" style="max-width: 600px; margin: 0 auto 40px;">
+  <div class="carousel-indicators" style="bottom: -30px;">
+    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/install_step_1.png" class="d-block w-100" alt="Selecting Destination Location">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/install_step_2.png" class="d-block w-100" alt="Ready to Install Confirmation Screen">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/install_step_3.png" class="d-block w-100" alt="Copying Files Progress Bar">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/install_step_4.png" class="d-block w-100" alt="Extracting Assets Screen">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#installCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#installCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 1. **Destination Location (`Step 1`):** Choose the directory path where the program files should be stored. By default, it will suggest a subfolder inside your local `AppData` directory or `Program Files`.
 2. **Ready to Install (`Step 2`):** Review your chosen directories and settings, then click **Install** to start copying files.
