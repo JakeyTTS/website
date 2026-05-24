@@ -27,7 +27,17 @@
                                     {{ if .icon }}
                                         {{ if or (strings.HasSuffix .icon ".svg") (strings.HasSuffix .icon ".png") }}
                                             {{ $iconPath := .icon }}
-                                            <img src="{{ $iconPath | relURL }}" alt="{{ .title }} icon" class="align-middle" style="width: 24px; height: 24px; object-fit: contain;">
+                                            {{ if strings.HasSuffix $iconPath ".svg" }}
+                                                {{ with resources.Get $iconPath }}
+                                                    <span class="align-middle d-inline-flex align-items-center justify-content-center text-primary" style="width: 24px; height: 24px;">
+                                                        {{ .Content | safeHTML }}
+                                                    </span>
+                                                {{ else }}
+                                                    <img src="{{ $iconPath | relURL }}" alt="{{ .title }} icon" class="align-middle" style="width: 24px; height: 24px; object-fit: contain;">
+                                                {{ end }}
+                                            {{ else }}
+                                                <img src="{{ $iconPath | relURL }}" alt="{{ .title }} icon" class="align-middle" style="width: 24px; height: 24px; object-fit: contain;">
+                                            {{ end }}
                                         {{ else }}
                                             <i class="material-icons align-middle h4 mb-0">{{ .icon }}</i>
                                         {{ end }}
