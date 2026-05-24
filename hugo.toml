@@ -42,8 +42,8 @@ enableEmoji = true
   weight = 20
 
 [params.Author]
-  name = "JakeyTTS Team"
-  bio = "The creators and maintainers of JakeyTTS, a powerful text-to-speech engine for streamers."
+  name = "abdldavid"
+  bio = "The creator and maintainer of JakeyTTS, a powerful text-to-speech engine for streamers."
   avatar = "images/logo.png"
 
 [[menu.main]]

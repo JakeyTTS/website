@@ -5,7 +5,7 @@ draft: false
 description: "Welcome to the official blog for JakeyTTS. Learn about what we do, how we help streamers, and what's coming next."
 type: "blog"
 layout: "single"
-author: "JakeyTTS Team"
+author: "abdldavid"
 image: "images/home_jakeytts.png"
 ---
 
