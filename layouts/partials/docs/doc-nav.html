@@ -1,38 +1,88 @@
 <hr class="doc-hr">
 <div id="doc-nav" class="d-print-none">
-{{ if .Parent -}}
-	{{ $pages := .Parent.RegularPages.ByWeight -}}
-	{{ if gt (len $pages) 1 -}}
-    <div class="row flex-xl-nowrap">
-	{{ with $pages.Next . -}}
-        <div class="col-sm-6 pt-2 doc-next">
-		<a href="{{ .RelPermalink }}">
-			<div class="card h-100 my-1">
-				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> {{ .Title }}</p>
-					{{ if eq .Site.Params.docs.navDesc true -}}
-                    	<p class="card-text ms-2">{{ .Description | truncate (.Site.Params.docs.navDescTrunc | default 40) }}</p>
-					{{ end }}
-				</div>
-			</div>
-		</a>
-        </div>
-	{{ end -}}
-	{{ with $pages.Prev . -}}
-        <div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="{{ .RelPermalink }}">
-			<div class="card h-100 my-1 text-end">
-				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">{{ .Title }} <i class="material-icons align-middle">navigate_next</i></p>
-					{{ if eq .Site.Params.docs.navDesc true -}}
-                    	<p class="card-text me-2">{{ .Description | truncate (.Site.Params.docs.navDescTrunc | default 40) }}</p>
-					{{ end }}
-				</div>
-			</div>
-		</a>
-        </div>
-	{{ end -}}
-    </div>
-	{{ end -}}
-{{ end -}}
+    {{ $currentPage := . }}
+    {{ $flat := slice }}
+
+    <!-- Build flat list of all pages under /docs/ in depth-first order -->
+    {{ $docs := .Site.GetPage "/docs" }}
+    {{ $flat = $flat | append $docs }}
+
+    {{ range $docs.Pages.ByWeight }}
+      {{ $p1 := . }}
+      {{ $flat = $flat | append $p1 }}
+      
+      {{ range $p1.Pages.ByWeight }}
+        {{ $p2 := . }}
+        {{ $flat = $flat | append $p2 }}
+        
+        {{ range $p2.Pages.ByWeight }}
+          {{ $p3 := . }}
+          {{ $flat = $flat | append $p3 }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    <!-- Find current page's index in the flat list -->
+    {{ .Scratch.Set "currentIndex" -1 }}
+    {{ range $index, $page := $flat }}
+      {{ if eq $page.RelPermalink $currentPage.RelPermalink }}
+        {{ $.Scratch.Set "currentIndex" $index }}
+      {{ end }}
+    {{ end }}
+
+    {{ $currentIndex := .Scratch.Get "currentIndex" }}
+
+    <!-- If found, render Previous and Next buttons -->
+    {{ if ne $currentIndex -1 }}
+        {{ $prevPage := "" }}
+        {{ $nextPage := "" }}
+        
+        {{ if gt $currentIndex 0 }}
+            {{ $prevPage = index $flat (sub $currentIndex 1) }}
+        {{ end }}
+        
+        {{ if lt $currentIndex (sub (len $flat) 1) }}
+            {{ $nextPage = index $flat (add $currentIndex 1) }}
+        {{ end }}
+
+        {{ if or $prevPage $nextPage }}
+            <div class="row flex-xl-nowrap">
+                <!-- Previous Button (Left side) -->
+                <div class="col-sm-6 pt-2 doc-prev">
+                    {{ with $prevPage }}
+                        <a href="{{ .RelPermalink }}">
+                            <div class="card h-100 my-1">
+                                <div class="card-body py-2">
+                                    <p class="card-title fs-5 fw-semibold lh-base mb-0">
+                                        <i class="material-icons align-middle">navigate_before</i> {{ .Title }}
+                                    </p>
+                                    {{ if eq .Site.Params.docs.navDesc true -}}
+                                        <p class="card-text ms-2">{{ .Description | truncate (.Site.Params.docs.navDescTrunc | default 40) }}</p>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+                
+                <!-- Next Button (Right side) -->
+                <div class="col-sm-6 pt-2 doc-next">
+                    {{ with $nextPage }}
+                        <a class="ms-auto" href="{{ .RelPermalink }}">
+                            <div class="card h-100 my-1 text-end">
+                                <div class="card-body py-2">
+                                    <p class="card-title fs-5 fw-semibold lh-base mb-0">
+                                        {{ .Title }} <i class="material-icons align-middle">navigate_next</i>
+                                    </p>
+                                    {{ if eq .Site.Params.docs.navDesc true -}}
+                                        <p class="card-text me-2">{{ .Description | truncate (.Site.Params.docs.navDescTrunc | default 40) }}</p>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
 </div>
