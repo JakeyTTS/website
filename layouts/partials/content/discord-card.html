@@ -13,12 +13,12 @@
 		<div class="self-center flex flex-col w-full md:w-2/5 items-start md:items-end">
 			{{ if site.Params.social.discord }}
 			<a href="https://discord.gg/{{ site.Params.social.discord }}" target="_blank" rel="noopener noreferrer" class="discord-btn px-8 py-3 rounded-full bg-white text-blue-600 font-bold hover:bg-zinc-100 transition-colors flex items-center space-x-2">
+				<span>Join Discord Server</span>
 				{{ with resources.Get "images/social/discord.svg" }}
 					<span class="w-5 h-5 flex items-center justify-center text-blue-600">
 						{{ .Content | safeHTML }}
 					</span>
 				{{ end }}
-				<span>Join Discord</span>
 			</a>
 			{{ end }}
 		</div>
