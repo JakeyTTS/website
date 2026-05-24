@@ -32,9 +32,21 @@
             </div><!--end navigation-->
 
             <!-- Social Links Start -->
-            {{ with $.Scratch.Get "social_list" }}
+            {{ $socialList := $.Scratch.Get "social_list" }}
+            {{ if or $socialList site.Params.social.discord }}
             <ul class="social-link d-flex list-inline mb-0 align-items-center">
-                {{ range . }}
+                {{ if site.Params.social.discord }}
+                    <li class="list-inline-item mb-0">
+                        <a href="https://discord.gg/{{ site.Params.social.discord }}" alt="discord" rel="noopener noreferrer" target="_blank">
+                            <div class="btn btn-icon btn-landing border-0">
+                                {{ with resources.Get "images/social/discord.svg" }}
+                                    {{ .Content | safeHTML }}
+                                {{ end }}
+                            </div>
+                        </a>
+                    </li>
+                {{ end }}
+                {{ range $socialList }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
                     <li class="list-inline-item mb-0">
                         <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else if eq . `bluesky` }} https://bsky.app/profile/{{ index site.Params.social . }} {{ else }} https://{{ . }}.com/{{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank">

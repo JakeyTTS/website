@@ -51,6 +51,17 @@
             {{ end }}
 
             <ul class="list-unstyled mb-0">
+                {{ if site.Params.social.discord }}
+                    <li class="list-inline-item mb-0">
+                        <a href="https://discord.gg/{{ site.Params.social.discord }}" alt="discord" rel="noopener noreferrer" target="_blank">
+                            <div class="btn btn-icon btn-default border-0">
+                                {{ with resources.Get "images/social/discord.svg" }}
+                                    {{ .Content | safeHTML }}
+                                {{ end }}
+                            </div>
+                        </a>
+                    </li>
+                {{ end }}
                 {{ with $.Scratch.Get "social_list" }}
                 {{ range . }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
