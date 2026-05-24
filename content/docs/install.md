@@ -40,35 +40,33 @@ Once the installer launches, you must select the installation scope for the appl
 
 The wizard will guide you through the setup stages to copy files onto your system:
 
-<div id="installCarousel" class="carousel carousel-dark slide my-4" data-bs-ride="carousel" style="max-width: 600px; margin: 0 auto 40px;">
-  <div class="carousel-indicators" style="bottom: -30px;">
-    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#installCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<ul class="nav nav-tabs my-4" id="installTabs" role="tablist" style="justify-content: center;">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="step1-tab" data-bs-toggle="tab" data-bs-target="#step1" type="button" role="tab" aria-controls="step1" aria-selected="true">Step 1: Destination</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="step2-tab" data-bs-toggle="tab" data-bs-target="#step2" type="button" role="tab" aria-controls="step2" aria-selected="false">Step 2: Confirm</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="step3-tab" data-bs-toggle="tab" data-bs-target="#step3" type="button" role="tab" aria-controls="step3" aria-selected="false">Step 3: Progress</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="step4-tab" data-bs-toggle="tab" data-bs-target="#step4" type="button" role="tab" aria-controls="step4" aria-selected="false">Step 4: Finalize</button>
+  </li>
+</ul>
+<div class="tab-content my-3" id="installTabsContent" style="max-width: 600px; margin: 0 auto 30px;">
+  <div class="tab-pane fade show active" id="step1" role="tabpanel" aria-labelledby="step1-tab">
+    <img src="/images/install_step_1.png" class="d-block w-100" alt="Selecting Destination Location">
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/images/install_step_1.png" class="d-block w-100" alt="Selecting Destination Location">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/install_step_2.png" class="d-block w-100" alt="Ready to Install Confirmation Screen">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/install_step_3.png" class="d-block w-100" alt="Copying Files Progress Bar">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/install_step_4.png" class="d-block w-100" alt="Extracting Assets Screen">
-    </div>
+  <div class="tab-pane fade" id="step2" role="tabpanel" aria-labelledby="step2-tab">
+    <img src="/images/install_step_2.png" class="d-block w-100" alt="Ready to Install Confirmation Screen">
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#installCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#installCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="tab-pane fade" id="step3" role="tabpanel" aria-labelledby="step3-tab">
+    <img src="/images/install_step_3.png" class="d-block w-100" alt="Copying Files Progress Bar">
+  </div>
+  <div class="tab-pane fade" id="step4" role="tabpanel" aria-labelledby="step4-tab">
+    <img src="/images/install_step_4.png" class="d-block w-100" alt="Extracting Assets Screen">
+  </div>
 </div>
 
 1. **Destination Location (`Step 1`):** Choose the directory path where the program files should be stored. By default, it will suggest a subfolder inside your local `AppData` directory or `Program Files`.
