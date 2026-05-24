@@ -52,9 +52,10 @@ The right sidebar displays formatting tokens you can write inside Twitch command
 
 ### Dynamic Scripting Options
 * **User & Arguments:**
-  * `{user}`: Evaluates to the name of the message sender.
-  * `{target}`: Evaluates to the first word following the trigger command.
-  * `{1}, {2}, {3}...`: References specific words from the incoming message parameters.
+  * `{user}`: Evaluates to the display name of the user who sent the message or redeemed the reward.
+  * `{target}`: For commands, evaluates to the first word following the command. For redeems, evaluates to the exact name of the Channel Point Redeem itself.
+  * `{message}`: Only for Channel Point Redeems; evaluates to the text input message typed by the viewer when redeeming the reward.
+  * `{1}, {2}, {3}...`: References specific words from the incoming message parameters by index.
 * **Randomizers:**
   * `{random:X-Y}`: Inserts a random number between `X` and `Y` (e.g., `{random:1-100}`).
   * `[choose: A | B]`: Picks randomly between option `A` or option `B` (e.g., `[choose: Yes | No]`).

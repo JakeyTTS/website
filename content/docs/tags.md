@@ -18,10 +18,13 @@ Dynamic scripting tags allow you to personalize responses based on the message c
 
 ### User & Message Variables
 
-These tags are replaced at runtime with details from the Twitch chat message that triggered the event:
+These tags are replaced at runtime with details from the Twitch chat message or channel point redemption that triggered the event:
 
-* **`{user}`**: Evaluates to the display name of the Twitch user who sent the message (e.g., *Jakey*).
-* **`{target}`**: Evaluates to the first word following the command or redeem message. Often used to "target" another user (e.g., in a `!hug {target}` command).
+* **`{user}`**: Evaluates to the display name of the Twitch user who sent the message or redeemed the channel points (e.g., *Jakey*).
+* **`{target}`**:
+  * **For Commands:** Evaluates to the first word following the command in the chat message. Often used to "target" another user (e.g., in a `!hug {target}` command).
+  * **For Redeems:** Evaluates to the exact name of the Channel Point Redeem itself.
+* **`{message}`**: Only available in **Channel Point Redeems**. Evaluates to the custom text message typed by the viewer when redeeming (requires "Require viewer to enter text" enabled on the Twitch Creator Dashboard).
 * **`{1}`, `{2}`, `{3}...`**: References specific words in the user's message by index. `{1}` is the first word, `{2}` is the second word, and so on.
 
 ### Randomizers
