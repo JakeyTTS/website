@@ -6,7 +6,7 @@ description: "Welcome to the official blog for JakeyTTS. Learn about what we do,
 type: "blog"
 layout: "single"
 author: "JakeyTTS Team"
-image: "images/logo.png"
+image: "images/home_jakeytts.png"
 ---
 
 We are thrilled to launch the official blog for **JakeyTTS**! This blog will be our main channel for sharing product updates, tips on stream audio optimization, plugin development guides, and new feature highlights.
