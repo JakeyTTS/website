@@ -42,12 +42,10 @@
             {{ if .Site.Params.version }}
             <div class="dropdown me-2">
                 <button class="btn btn-link btn-default dropdown-toggle d-flex align-items-center py-1 px-2" type="button" id="versionDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; font-size: 0.85rem; font-weight: 600;">
-                    <span class="material-icons size-18 me-1 align-middle">schema</span>
                     v{{ .Site.Params.version }}
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versionDropdown" style="font-size: 0.85rem;">
                     <li><a class="dropdown-item active" href="#">v{{ .Site.Params.version }} (Latest)</a></li>
-                    <li><a class="dropdown-item" href="https://github.com/JakeyTTS/JakeyTTS/releases/tag/v1.0" target="_blank" rel="noopener noreferrer">v1.0 (Legacy)</a></li>
                 </ul>
             </div>
             {{ end }}
