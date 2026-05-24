@@ -9,20 +9,25 @@ author: "abdldavid"
 image: "images/home_jakeytts.png"
 ---
 
-We are thrilled to launch the official blog for **JakeyTTS**! This blog will be our main channel for sharing product updates, tips on stream audio optimization, plugin development guides, and new feature highlights.
+I'm excited to launch the official blog for **JakeyTTS**! This blog will be my main channel for sharing product updates, insights, plugin development guides, and new feature highlights.
 
 ## What is JakeyTTS?
 
-JakeyTTS is a powerful, lightweight Text-to-Speech client designed for streamers and creators. It is built to run smoothly in the background while integrating directly with Twitch chat, allowing your viewers to trigger customized TTS messages.
+For those who don't know, JakeyTTS is a free, open-source, and lightweight Text-to-Speech client designed for streamers and creators. It is built to run smoothly in the background while integrating directly with Twitch chat, allowing your viewers to trigger customized TTS messages.
 
 Here are some of the key features of JakeyTTS:
-- **Twitch Integration:** Seamlessly connect to Twitch IRC.
+- **Twitch Integration:** Seamlessly connect to Twitch.
 - **Voice Mixing:** Customize voice presets with speed, pitch, and effects.
-- **SFX & Melodies:** Trigger audio cues on command.
+- **SFX & Melodies:** Trigger audio cues on command and create custom melodies (like Tomodachi Life).
 - **Extensible Plugins:** Write custom plugins to extend the client functionality.
+
+## Why I Built JakeyTTS?
+
+I decided to start this project for my friend Jakey, He's a small streamer and I wanted to make something that could help him out. He relied on web based tts, that didnt allow him to change voices or sounds.
+That's also the reason why the project is called JakeyTTS, a reminder of my great friend.
 
 ## Why a Blog?
 
-As we release new updates (like the current version `v2.0`!), we want a dedicated space to go deep into technical details, share community plugin showcases, and provide tutorials.
+As I'll be releasing new updates, I'll use this blog to share our journey, go deep into technical details, share community plugin showcases, and provide tutorials.
 
-Thank you for being part of the JakeyTTS journey!
+I'm looking forward to build this community!
