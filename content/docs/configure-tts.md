@@ -43,23 +43,3 @@ This is the control panel to connect JakeyTTS to your Twitch channel:
 Test your settings before going live:
 1. Type a sample message in the input text line (e.g., *Testing output!*).
 2. Click the blue **Speak Test** button to render the voice output through your configured primary/secondary output devices.
-
----
-
-## 4. Tag & Scripting Guide
-
-The right sidebar displays formatting tokens you can write inside Twitch commands, redeems, or custom replies to inject dynamic variables:
-
-### Dynamic Scripting Options
-* **User & Arguments:**
-  * `{user}`: Evaluates to the display name of the user who sent the message or redeemed the reward.
-  * `{target}`: For commands, evaluates to the first word following the command. For redeems, evaluates to the exact name of the Channel Point Redeem itself.
-  * `{message}`: Only for Channel Point Redeems; evaluates to the text input message typed by the viewer when redeeming the reward.
-  * `{1}, {2}, {3}...`: References specific words from the incoming message parameters by index.
-* **Randomizers:**
-  * `{random:X-Y}`: Inserts a random number between `X` and `Y` (e.g., `{random:1-100}`).
-  * `[choose: A | B]`: Picks randomly between option `A` or option `B` (e.g., `[choose: Yes | No]`).
-* **Advanced Options (Collapsible panels):**
-  - **Voice & Pitch:** Customizes the pitch, speed, or voice profile dynamically.
-  - **Audio Effects:** Applies filters or modifications to the synthesized output.
-  - **Timing & Speed:** Adds pauses or adjustments to spacing.
