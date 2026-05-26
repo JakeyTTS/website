@@ -33,32 +33,62 @@
 </section>
 {{ end -}}
 
-<!-- Recent Posts Section (all posts except featured) -->
+<!-- Plugins & Integrations Section -->
+{{- $plugins := where $pages "Params.tags" "intersect" (slice "plugin" "pluggin") -}}
+{{- $plugins = where $plugins "File.UniqueID" "!=" $featured_id -}}
+{{- if gt (len $plugins) 0 -}}
 <section class="mb-16">
   <div class="flex items-center mb-6">
-    <h2 class="text-3xl md:text-4xl font-bold mr-auto">Recent Posts</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mr-auto">Plugin Updates</h2>
   </div>
-
-  {{- $filtered_pages := where $pages "File.UniqueID" "!=" $featured_id -}}
-  {{- $paginator := .Paginate $filtered_pages 6 -}}
-
   <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
-    {{ range $paginator.Pages }}
+    {{ range $plugins }}
       {{- partial "content/card.html" . -}}
     {{ end }}
   </div>
+</section>
+{{- end -}}
 
-  <!-- Paginate here -->
-  <div class="flex items-center mt-10">
-    {{- if $paginator.HasPrev -}}
-      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200 mr-auto" href="{{ $paginator.Prev.URL }}">← Previous</a>
-    {{- end -}}
-
-    {{- if $paginator.HasNext -}}
-      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200" href="{{ $paginator.Next.URL }}">Next →</a>
-    {{- end -}}
+<!-- Announcements Section -->
+{{- $announcements := where $pages "Params.tags" "intersect" (slice "announcement" "general") -}}
+{{- $announcements = where $announcements "File.UniqueID" "!=" $featured_id -}}
+{{- if gt (len $announcements) 0 -}}
+<section class="mb-16">
+  <div class="flex items-center mb-6">
+    <h2 class="text-3xl md:text-4xl font-bold mr-auto">Announcements</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
+    {{ range $announcements }}
+      {{- partial "content/card.html" . -}}
+    {{ end }}
   </div>
 </section>
+{{- end -}}
+
+<!-- Other Posts Section (Fallback) -->
+{{- $other_posts := where $pages "File.UniqueID" "!=" $featured_id -}}
+{{- $filtered_others := slice -}}
+{{- range $other_posts -}}
+  {{- $is_plugin := intersect .Params.tags (slice "plugin" "pluggin") -}}
+  {{- $is_announcement := intersect .Params.tags (slice "announcement" "general") -}}
+  {{- if and (eq (len $is_plugin) 0) (eq (len $is_announcement) 0) -}}
+    {{- $filtered_others = $filtered_others | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $filtered_others) 0 -}}
+<section class="mb-16">
+  <div class="flex items-center mb-6">
+    <h2 class="text-3xl md:text-4xl font-bold mr-auto">Other News</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
+    {{ range $filtered_others }}
+      {{- partial "content/card.html" . -}}
+    {{ end }}
+  </div>
+</section>
+{{- end -}}
+
 
 <!-- Discord Invite Section -->
 {{- partial "content/discord-card.html" . -}}

@@ -7,6 +7,7 @@ type: "blog"
 layout: "single"
 author: "abdldavid"
 image: "images/melodies_page_filled.png"
+tags: ["plugin", "pluggin", "tts", "voice", "melodies"]
 ---
 
 Hello everyone,

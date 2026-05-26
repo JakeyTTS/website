@@ -7,6 +7,7 @@ type: "blog"
 layout: "single"
 author: "abdldavid"
 image: "images/home_jakeytts.png"
+tags: ["general", "announcement"]
 ---
 
 I'm excited to launch the official blog for **JakeyTTS**! This blog will be my main channel for sharing product updates, insights, plugin development guides, and new feature highlights.
