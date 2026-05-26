@@ -6,7 +6,7 @@ description: "Welcome to the official blog for JakeyTTS. Learn about what we do,
 type: "blog"
 layout: "single"
 author: "abdldavid"
-image: "images/home_jakeytts.png"
+image: "images/jakeytts_banner.png"
 tags: ["general", "announcement"]
 ---
 

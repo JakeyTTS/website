@@ -6,7 +6,7 @@ description: "Stinkerbott 2.0 is now live on Twitch! Read about the local, ethic
 type: "blog"
 layout: "single"
 author: "abdldavid"
-image: "images/melodies_page_filled.png"
+image: "images/jakeytts_banner.png"
 tags: ["plugin", "pluggin", "tts", "voice", "melodies"]
 ---
 
