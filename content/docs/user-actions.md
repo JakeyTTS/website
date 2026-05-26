@@ -78,7 +78,7 @@ You can write custom messages for four different categories of goals:
 * **Subscription Goals Message:** Triggers when a sub goal is hit.
 * **Follower Goals Message:** Triggers when a follower goal is hit.
 * **Bits Goals Message:** Triggers when a bits cheer goal is hit.
-* **Channel Points Goals Message:** Triggers when a channel points spend goal is hit.
+* **Channel Points Goals Message:** Triggers when a channel points goal is hit.
 
 ### Parameter Guide
 * `{goal_title}`: Evaluates to the active description text configured on the Twitch dashboard for the goal.
