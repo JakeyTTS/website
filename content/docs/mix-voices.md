@@ -56,7 +56,7 @@ Once you have saved a Mixed Voice, you can set it as your primary stream voice d
 1. Navigate to **TTS Settings** in the left sidebar.
 2. Under the **Language** selector, scroll down and select **Custom**.
 3. The **Voice** selector will automatically load all your active Mixed Voices.
-4. Select your custom mix (e.g. `Hybrid_1`) and click save.
+4. Select your custom mix (e.g. `Hybrid_1`) and is ready to use.
 
 ![TTS Custom Selection](images/ttssettings_jakeytts.png)
 *(Selecting a custom Mixed Voice in the general TTS Settings panel.)*
