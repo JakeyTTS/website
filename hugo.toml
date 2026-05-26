@@ -1,6 +1,6 @@
 baseURL = 'https://jakeytts.com/'
 languageCode = 'en-us'
-title = 'JakeyTTS Documentation'
+title = 'JakeyTTS'
 enableEmoji = true
 
 [module]
@@ -63,6 +63,13 @@ enableEmoji = true
 
 [outputs]
   home = ["HTML", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[permalinks]
+  tags = "/blog/tags/:slug/"
 
 [markup]
     [markup.tableOfContents]

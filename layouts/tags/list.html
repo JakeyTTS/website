@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<!-- Breadcrumb -->
+<div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="{{ "/" | relLangURL }}">JakeyTTS</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="{{ "/blog/" | relLangURL }}">Blog</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			{{ .Title | humanize }}
+		</li>
+	</ul>
+</div>
+
+<section class="my-14">
+  <div class="flex items-center mb-10">
+    <h1 class="text-3xl md:text-5xl font-bold mr-auto">Tag: {{ .Title | humanize }}</h1>
+  </div>
+
+  {{- $paginator := .Paginate .Pages 6 -}}
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
+    {{ range $paginator.Pages }}
+      {{- partial "content/card.html" . -}}
+    {{ end }}
+  </div>
+
+  <!-- Paginate here -->
+  <div class="flex items-center mt-10">
+    {{- if $paginator.HasPrev -}}
+      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200 mr-auto" href="{{ $paginator.Prev.URL }}">← Previous</a>
+    {{- end -}}
+
+    {{- if .Paginator.HasNext -}}
+      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200" href="{{ .Paginator.Next.URL }}">Next →</a>
+    {{- end -}}
+  </div>
+</section>
+
+<!-- Discord Invite Section -->
+{{- partial "content/discord-card.html" . -}}
+
+{{ end }}
