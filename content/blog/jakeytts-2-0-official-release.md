@@ -1,6 +1,6 @@
 ---
 title: "JakeyTTS 2.0 is Officially Available!"
-date: 2026-05-28T20:00:00+02:00
+date: 2026-05-28T19:00:00+01:00
 draft: false
 description: "JakeyTTS 2.0 is officially released! Read about the journey of evolving from a simple script into a native Windows 11 desktop app, explore its key features, and find out how you can support my powered wheelchair fund."
 type: "blog"
