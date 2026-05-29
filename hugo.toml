@@ -18,7 +18,6 @@ enableEmoji = true
   # search = false
 
 [params.social]
-  github = "JakeyTTS/JakeyTTS"
   discord = "yk25Vg4Ju8"
 
 [params.docs]
