@@ -14,7 +14,7 @@ hero:
     rounded: true
   
   badge:
-    text: "Version 2.0.1"
+    text: "Version 2.0.2"
     color: "primary"
     pill: true
     soft: true
@@ -22,7 +22,7 @@ hero:
   ctaButton:
     icon: "download"
     btnText: "Download"
-    url: "https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.1/JakeyTTS_v2.0.1.exe"
+    url: "https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.2/JakeyTTS_v2.0.2.exe"
   
   cta2Button:
     icon: "description"

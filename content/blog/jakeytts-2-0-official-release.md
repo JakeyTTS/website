@@ -73,7 +73,7 @@ Any contribution, no matter how small, makes an immense difference in my quality
 
 JakeyTTS 2.0 is extremely lightweight, requiring less than 700 MB of disk space and minimal background CPU usage.
 
-1.  **[Download JakeyTTS 2.0](https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.1/JakeyTTS_v2.0.1.exe)** (Direct `.exe` download).
+1.  **[Download JakeyTTS 2.0](https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.2/JakeyTTS_v2.0.2.exe)** (Direct `.exe` download).
 2.  Follow the **[Installation Guide](/docs/install/)** to set up your environment (.NET 8.0 Runtime required).
 3.  Read the **[Twitch Integration Docs](/docs/configure-tts/)** to connect your channel.
 

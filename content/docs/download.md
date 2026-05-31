@@ -9,7 +9,7 @@ weight = 10
 
 You can download the latest pre-compiled version of JakeyTTS or grab the source code using the links below:
 
-* **[Download Installer (.exe)](https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.1/JakeyTTS_v2.0.1.exe)**
+* **[Download Installer (.exe)](https://github.com/JakeyTTS/JakeyTTS/releases/download/v2.0.2/JakeyTTS_v2.0.2.exe)**
 
 ---
 
